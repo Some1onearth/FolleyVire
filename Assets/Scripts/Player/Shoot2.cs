@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shoot2 : MonoBehaviour
 {
     public GameObject bullet;
+    public int maxBulletCount = 2;
 
     public AudioSource _as;
     public AudioClip[] audioClipArray;
@@ -20,7 +21,7 @@ public class Shoot2 : MonoBehaviour
     }
     public void ShootBullet()
     {
-        if (Input.GetButtonDown("P2 R1") && GameHandler.gameHandler.bulletLimit2 < 3)
+        if (Input.GetButtonDown("P2 R1") && GameHandler.gameHandler.bulletLimit2 < maxBulletCount)
         {
             Instantiate(bullet, transform.position, Quaternion.identity);
             GameHandler.gameHandler.AddBulletLimit2();

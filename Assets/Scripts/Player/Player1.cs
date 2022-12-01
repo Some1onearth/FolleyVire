@@ -29,6 +29,7 @@ public class Player1 : MonoBehaviour
             GameHandler.gameHandler.P1Health -= 1;
             if (GameHandler.gameHandler.P1Health == 0)
             {
+                Destroy(gameObject);
                 GameHandler.gameHandler.Buttons();
                 GameHandler.gameHandler.P1Wins.SetActive(true);
             }
@@ -41,6 +42,7 @@ public class Player1 : MonoBehaviour
             GameHandler.gameHandler.P1Health -= 1;
             if (GameHandler.gameHandler.P1Health == 0)
             {
+                Destroy(gameObject);
                 GameHandler.gameHandler.Buttons();
                 GameHandler.gameHandler.P2Wins.SetActive(true);
             }

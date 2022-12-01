@@ -21,6 +21,7 @@ public class Player2 : MonoBehaviour
             GameHandler.gameHandler.P2Health -= 1;
             if (GameHandler.gameHandler.P2Health == 0)
             {
+                Destroy(gameObject);
                 GameHandler.gameHandler.Buttons();
                 GameHandler.gameHandler.P1Wins.SetActive(true);
             }
@@ -33,6 +34,7 @@ public class Player2 : MonoBehaviour
             GameHandler.gameHandler.P2Health -= 1;
             if (GameHandler.gameHandler.P2Health == 0)
             {
+                Destroy(gameObject);
                 GameHandler.gameHandler.Buttons();
                 GameHandler.gameHandler.P2Wins.SetActive(true);
             }
