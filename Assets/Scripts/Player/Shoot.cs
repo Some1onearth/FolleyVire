@@ -25,6 +25,7 @@ public class Shoot : MonoBehaviour
         {
             Instantiate(bullet, transform.position, Quaternion.identity);
             GameHandler.gameHandler.AddBulletLimit1();
+            //play shooting clip at random between full amount of sfx
             _as.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
             _as.PlayOneShot(_as.clip);
             return;
