@@ -32,6 +32,8 @@ public class EnemyCollision : MonoBehaviour
         {
             //destroy bullet THEN destroy self
             Destroy(collision.gameObject);
+            GameHandler.gameHandler.MinusBulletLimit1();
+            GameHandler.gameHandler.MinusBulletLimit2();
         }
         Debug.Log(collision.gameObject.name);
 

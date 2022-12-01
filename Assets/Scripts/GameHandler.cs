@@ -8,16 +8,23 @@ public class GameHandler : MonoBehaviour
 {
     public static GameHandler gameHandler;
     public GameObject enemy, buttonsPanel;
+    public int bulletLimit1 = 0;
+    public int bulletLimit2 = 0;
     public int P1Health = 5;
     public int P2Health = 5;
     public Image player1Health;
     public Image player2Health;
     public GameObject P1Wins;
     public GameObject P2Wins;
-    
+
+    public GameObject playersToSpawn;
+    public float timeLeft = 3.0f;
+    [SerializeField] Text startText; // used for showing countdown from 3, 2, 1 
+
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         if (gameHandler == null)
         {
             gameHandler = this;
@@ -32,7 +39,30 @@ public class GameHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timeLeft -= Time.deltaTime;
+        startText.text = (timeLeft).ToString("0");
+        if (timeLeft < 0)
+        {
+            playersToSpawn.gameObject.SetActive(true);
+            Time.timeScale = 1;
+            startText.gameObject.SetActive(false);
+        }
+    }
+    public void AddBulletLimit1()
+    {
+        bulletLimit1++;
+    }
+    public void AddBulletLimit2()
+    {
+        bulletLimit2++;
+    }
+    public void MinusBulletLimit1()
+    {
+        bulletLimit1--;
+    }
+    public void MinusBulletLimit2()
+    {
+        bulletLimit2--;
     }
     public void SetPlayer1Health()
     {

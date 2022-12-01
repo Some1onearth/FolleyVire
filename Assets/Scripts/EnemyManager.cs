@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemy;
     public Transform pointA;
     public Transform pointB;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +17,12 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void Spawn()
     {
         Vector3 spawnPos = Vector3.Lerp(pointA.position, pointB.position, Random.Range(0f, 1f)); //lerp 
-        Instantiate(enemy, spawnPos, Quaternion.identity);
+        int randomIndex = Random.Range(0, enemy.Length);
+        Instantiate(enemy[randomIndex], spawnPos, Quaternion.identity);
     }
 }

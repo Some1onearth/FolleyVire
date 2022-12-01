@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet2 : MonoBehaviour
 {
     public float speed;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
             //decrease bullet limit
-            GameHandler.gameHandler.MinusBulletLimit1();
+            GameHandler.gameHandler.MinusBulletLimit2();
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -32,17 +32,17 @@ public class Bullet : MonoBehaviour
             //destroy bullet THEN destroy self
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            GameHandler.gameHandler.MinusBulletLimit1();
+            GameHandler.gameHandler.MinusBulletLimit2();
         }
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
-            GameHandler.gameHandler.MinusBulletLimit1();
+            GameHandler.gameHandler.MinusBulletLimit2();
         }
         if (collision.gameObject.tag == "Mirror")
         {
             gameObject.transform.Rotate(0, 180, 0);
-            speed = -10f;
+            speed = 10f;
         }
         Debug.Log(collision.gameObject.name);
     }

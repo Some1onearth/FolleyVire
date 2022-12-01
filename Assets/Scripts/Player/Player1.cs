@@ -6,13 +6,7 @@ public class Player1 : MonoBehaviour
 {
     [SerializeField] public float _speed = 5f;
     Vector3 _moveDir;
-    public AudioSource _as;
-    public AudioClip[] audioClipArray;
 
-    void Awake()
-    {
-        _as = GetComponent<AudioSource>();
-    }
     void Update()
     {
         PlayerMovement();
@@ -30,12 +24,25 @@ public class Player1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet2")
         {
+            GameHandler.gameHandler.MinusBulletLimit2();
             GameHandler.gameHandler.SetPlayer1Health();
             GameHandler.gameHandler.P1Health -= 1;
             if (GameHandler.gameHandler.P1Health == 0)
             {
                 GameHandler.gameHandler.Buttons();
                 GameHandler.gameHandler.P1Wins.SetActive(true);
+            }
+            Destroy(collision.gameObject);
+        }        
+        if (collision.gameObject.tag == "Bullet")
+        {
+            GameHandler.gameHandler.MinusBulletLimit1();
+            GameHandler.gameHandler.SetPlayer1Health();
+            GameHandler.gameHandler.P1Health -= 1;
+            if (GameHandler.gameHandler.P1Health == 0)
+            {
+                GameHandler.gameHandler.Buttons();
+                GameHandler.gameHandler.P2Wins.SetActive(true);
             }
             Destroy(collision.gameObject);
         }

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1786327071409732061}
   - component: {fileID: -637339104632017949}
   - component: {fileID: 3457893665956973169}
-  - component: {fileID: -8892930310450940897}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -130,18 +129,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &-8892930310450940897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786327071409732062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0eb7add15067564286c1ffb26f19d33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8371320166666529028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,10 +192,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8244283149176504592, guid: 73faf12e395293342a654a13f774c39e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c776f11eeeab327418cb9e35470a4558, type: 2}
+    - target: {fileID: -3225838458450140633, guid: 73faf12e395293342a654a13f774c39e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c776f11eeeab327418cb9e35470a4558, type: 2}
     - target: {fileID: 919132149155446097, guid: 73faf12e395293342a654a13f774c39e, type: 3}
       propertyPath: m_Name
       value: rock_c_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3280647864742716069, guid: 73faf12e395293342a654a13f774c39e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c776f11eeeab327418cb9e35470a4558, type: 2}
+    - target: {fileID: 4524039849104636331, guid: 73faf12e395293342a654a13f774c39e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c776f11eeeab327418cb9e35470a4558, type: 2}
+    - target: {fileID: 5806759418574518688, guid: 73faf12e395293342a654a13f774c39e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c776f11eeeab327418cb9e35470a4558, type: 2}
+    - target: {fileID: 6920285478545601068, guid: 73faf12e395293342a654a13f774c39e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c776f11eeeab327418cb9e35470a4558, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73faf12e395293342a654a13f774c39e, type: 3}
 --- !u!4 &8333451702988803823 stripped

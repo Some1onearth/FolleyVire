@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Player2
   - Bullet2
+  - Mirror
   layers:
   - Default
   - TransparentFX
